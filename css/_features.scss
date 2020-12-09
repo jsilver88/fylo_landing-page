@@ -1,0 +1,49 @@
+.features {
+  background-color: $bgBlue;
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    max-width: 880px;
+    margin: 0 auto;
+    gap: 40px;
+
+    @include breakpoint(medium) {
+      row-gap: 6vw;
+      column-gap: 10vw;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(large) {
+      gap: 6vw 9vw;
+    }
+  }
+
+  .feature {
+    text-align: center;
+
+    &-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      height: 80px;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &-title {
+      font-family: $font-title;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    &-description {
+      font-size: 1rem;
+    }
+  }
+}
